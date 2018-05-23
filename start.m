@@ -93,7 +93,7 @@ end
 %% Learning Parameters
 display ('Learning Parameters...');
 Features = speye(numOfNode);
-[W1, H1, time] = IMC(sparse(graph), sparse(Features), sparse(ColFeatures), 80, lambda, 10); % learn TADW representations
+[W1, H1, time] = IMC(sparse(graph), sparse(Features), sparse(ColFeatures), k, lambda, 10); % learn TADW representations
 F1_Matrix = zeros(10,10); % F1 values for TADW+SVM
 F2_Matrix = zeros(10,10); % F1 values for DMF
 for i1 = 1:10
